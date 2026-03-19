@@ -10,15 +10,16 @@
 //   D = Delete  → DELETE /api/users/:id
 // ============================================================
 
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
 // Εισάγουμε τα helpers από τον φάκελο helpers/
 // Κάθε αρχείο έχει τη δική του ευθύνη (Single Responsibility)
-const { client, getCollection } = require("./helpers/db");
-const { validateUser } = require("./helpers/validateUser");
-const { parseId } = require("./helpers/parseId");
+import { client, getCollection } from "./helpers/db.js";
+import { validateUser } from "./helpers/validateUser.js";
+import { parseId } from "./helpers/parseId.js";
 
 // ------------------------------------------------------------
 // 1. ΑΡΧΙΚΟΠΟΙΗΣΗ ΕΦΑΡΜΟΓΗΣ
